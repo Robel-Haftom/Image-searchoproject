@@ -35,7 +35,8 @@ async function searchImage(key){
     imageLink.textContent = results.alt_description;
     
     imageWrapper.onclick = function(){
-        window.location.href=`${results.links.html}`;
+        window.open(`${results.links.html}` ,'_blank');
+        // window.location.href="thml";
     }
 
     imageWrapper.appendChild(image);
