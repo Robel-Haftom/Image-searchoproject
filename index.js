@@ -3,7 +3,7 @@ const accessKey = "gBDTwLnAyLGyuu8BVRK2TtcPBoQ37BH-xA8BUnEJfCg";
 const form = document.querySelector("form");
 const searchInput = document.getElementById("search-input");
 const searchResult = document.querySelector(".search-results");
-const showMore= document.getElementById("showmore-button");
+const showMoreButton= document.getElementById("showmore-button");
 
 page = 1;
 
@@ -44,6 +44,11 @@ async function searchImage(key){
     page++;
 
     if(page > 1){
-        showMore.style.display = "block";
+        showMoreButton.style.display = "block";
     }
 }
+
+showMoreButton.addEventListener("click", () => {
+    searchImage(searchInput.value);
+    console.log("clicked");
+})
