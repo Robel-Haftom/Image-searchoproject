@@ -73,6 +73,7 @@ img{
     background-repeat: no-repeat;
     border-radius: 3px;
     transition: transform .3s ease-in-out;
+    cursor: pointer;
 }
 
 .search-result:hover{

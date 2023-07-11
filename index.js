@@ -22,7 +22,7 @@ async function searchImage(key){
         searchResult.innerHTML = "";
     }
     const result = data.results;
-    result.map((results) => {        
+    result.map((results) => {    
     const imageWrapper = document.createElement("div")
     imageWrapper.classList.add("search-result");
     const image = document.createElement("img");
@@ -34,11 +34,16 @@ async function searchImage(key){
     imageLink.target = "_blank";
     imageLink.textContent = results.alt_description;
     
+    imageWrapper.onclick = function(){
+        window.location.href=`${results.links.html}`;
+    }
+
     imageWrapper.appendChild(image);
     imageWrapper.appendChild(imageLink);
 
     searchResult.appendChild(imageWrapper);
-    console.log()
+
+
     });
 
     page++;
